@@ -15,19 +15,17 @@ def index ():
 
 @app.route('/predict')
 def predict():
-
+    # dog_predictor = dog_predictor.predict()
     return redirect('/', code = 302)
 
-@app.route("/uploads/<path:filename>")
-def get_upload(filename):
-    return mongo.send_file(filename)
+# @app.route("/uploads/<path:filename>")
+# def get_upload(filename):
+#     return mongo.send_file(filename)
 
-@app.route("/uploads/<path:filename>", methods=["POST"])
+@app.route("/uploads/<path:filename>", methods=["GET", "POST"])
 def save_upload(filename):
     mongo.save_file(filename, request.files["file"])
-    return redirect("/predict", filename=filename)
-
-
+    return redirect("/predict", code = 302)
 
 if __name__ == '__main__':
     app.run(debug=True)
