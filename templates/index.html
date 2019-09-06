@@ -18,6 +18,7 @@
     <!-- CSS style sheet: -->
     <link rel="stylesheet" href="styles.css">
 
+
     <title>Dog Breed Predictor</title>
 </head>
 
@@ -32,28 +33,25 @@
                     the model will give you its best three predictions of what it thinks your mutt consists of. </p>
             </div>
         </div>
-        <div class="row">
-            <div id="square">
-            </div>
-        </div>
+
         <div class="row">
             <h2>Select a dog to predict</h2>
         </div>
         <div class="row">
-            <form>
+            <form id="form1" runat="server">
                 <div class="form-group">
-                    <label for="exampleFormControlFile1"></label>
-                    <input type="file" 
-                        class="form-control-file" 
-                        id="exampleFormControlFile1">
+                    <label for="image"></label>
+                    <input type="file" accept="image/*" onchange="loadFile(event)" class="form-control-file" id="image">
+                    <img id="output" />
+                    <script>
+                        var loadFile = function (event) {
+                            var output = document.getElementById('output');
+                            output.src = URL.createObjectURL(event.target.files[0]);
+                        };
+                    </script>
                 </div>
-                <div class="input-group-append" 
-                    method="POST" 
-                    action="/uploads/<path:filename>">
-                    <input type="submit" 
-                        value="Upload" 
-                        class="input-group-text " 
-                        name="Submit ">
+                <div class="input-group-append" method="POST" action="/uploads/<path:filename>">
+                    <input type="submit" value="Upload" class="input-group-text " name="Submit ">
             </form>
         </div>
     </div>
