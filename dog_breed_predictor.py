@@ -73,12 +73,12 @@ def dog_predictor():
     image_path = os.path.join("dog_images_to_predict", "Chihuahua_2973.jpg")
     predict(image_path)
 
-    image_path = os.path.join("dog_images_to_predict", "Labrador_retriever_57.jpg")
+    image_path = os.path.join("dog_images_to_predict", "Labrador_retriever_209.jpg")
     predict(image_path)
 
     # Using model to predict my dogs:
     image_path = os.path.join("dog_images_to_predict", "Kai_02.jpg")
     predict(image_path)
 
-    image_path = os.path.join("dog_images_to_predict", "Samson_02.jpg")
+    image_path = os.path.join("dog_images_to_predict", "Samson_07.jpg")
     predict(image_path)
