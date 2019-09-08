@@ -38,6 +38,10 @@
             <h2>Select a dog to predict</h2>
         </div>
         <div class="row">
+            <!-- I moved these attributes to the HTML <form> element: method, action, enctype
+                -------------------------------v
+            --------------------------------------------------v
+        ----------------------------------------------------------------------------------------v -->
             <form id="form1" runat="server"  method="POST" action="/uploads/<path:filename>" enctype="multipart/form-data" >
                 <div class="form-group">
                     <label for="image"></label>
