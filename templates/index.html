@@ -38,10 +38,10 @@
             <h2>Select a dog to predict</h2>
         </div>
         <div class="row">
-            <form id="form1" runat="server">
+            <form id="form1" runat="server"  method="POST" action="/uploads/<path:filename>" enctype="multipart/form-data" >
                 <div class="form-group">
                     <label for="image"></label>
-                    <input type="file" accept="image/*" onchange="loadFile(event)" class="form-control-file" id="image">
+                    <input type="file" accept="image/*" onchange="loadFile(event)" class="form-control-file" id="image" name="image">
                     <img id="output" />
                     <script>
                         var loadFile = function (event) {
@@ -50,8 +50,8 @@
                         };
                     </script>
                 </div>
-                <div class="input-group-append" method="POST" action="/uploads/<path:filename>">
-                    <input type="submit" value="Upload" class="input-group-text " name="Submit ">
+                <div class="input-group-append">
+                    <input type="submit" value="Upload" class="input-group-text " name="Submit">
             </form>
         </div>
     </div>
