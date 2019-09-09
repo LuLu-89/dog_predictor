@@ -1,5 +1,4 @@
 # Dog Breed Predictor
-(still in the works)
 
 Have a mutt that you've always wondered that they were mixed of? 
 
@@ -7,4 +6,7 @@ Have a mutt that you've always wondered that they were mixed of?
 * TensorFlow
 * Keras
 * Python
+
+## Server
+* Python Flask
 
