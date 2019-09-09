@@ -1,5 +1,4 @@
-#square {
-    height: 400px;
-    width: 400px;
-    background: green;
+body {
+    background-image: url("/background/corgi_butt.jpg");
+    background-repeat: repeat;
 }

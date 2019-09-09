@@ -16,51 +16,74 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <!-- CSS style sheet: -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body {
+            background-image: url("../background/corgi_butt.jpg");
+            background-repeat: repeat;
+        }
 
+        .container {
+            background-color: whitesmoke;
+        }
+    </style>
 
     <title>Dog Breed Predictor</title>
 </head>
 
 <body>
+    <!-- Just an image -->
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="../paw_print.jpeg" width="30" height="30" alt="">
+        </a>
+    </nav>
     <div class="container">
         <div class="row-justify-content-center">
             <div class="col-md-12">
                 <h1>Dog Breed Predictor</h1>
                 <hr />
                 <p>Ever wondered what your mutt consists of? The guessing game can be fun but it can be more fun when
-                    you find out when you are right. Simply upload a picture of your mutt below and click "Submit" then
+                    you find out when you are right. Simply upload a picture of your mutt below and click "Upload" then
                     the model will give you its best three predictions of what it thinks your mutt consists of. </p>
             </div>
         </div>
 
         <div class="row">
-            <h2>Select a dog to predict</h2>
+            <div class="col-lg-12">
+                <h2>Select a dog to predict</h2>
+            </div>
         </div>
         <div class="row">
-            <!-- I moved these attributes to the HTML <form> element: method, action, enctype
+            <div class="col-md-12">
+                <!-- I moved these attributes to the HTML <form> element: method, action, enctype
                 -------------------------------v
             --------------------------------------------------v
         ----------------------------------------------------------------------------------------v -->
-            <form id="form1" runat="server"  method="POST" action="/upload" enctype="multipart/form-data" >
-                <div class="form-group">
-                    <label for="image"></label>
-                    <input type="file" accept="image/*" onchange="loadFile(event)" class="form-control-file" id="image" name="image">
-                    <img id="output" />
-                    <script>
-                        var loadFile = function (event) {
-                            var output = document.getElementById('output');
-                            output.src = URL.createObjectURL(event.target.files[0]);
-                        };
-                    </script>
-                </div>
-                <div class="input-group-append">
-                    <input type="submit" value="Upload" class="input-group-text " name="Submit">
-            </form>
+                <form id="form1" runat="server" method="POST" action="/upload" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="image"></label>
+                        <input type="file" accept="image/*" onchange="loadFile(event)" class="form-control-file"
+                            id="image" name="image">
+                        <img id="output" />
+                        <script>
+                            var loadFile = function (event) {
+                                var output = document.getElementById('output');
+                                output.src = URL.createObjectURL(event.target.files[0]);
+                            };
+                        </script>
+                    </div>
+                    <div class="input-group-append">
+                        <input type="submit" value="Upload" class="input-group-text " name="Submit">
+                </form>
+            </div>
         </div>
     </div>
 
-
 </body>
+
+<footer>
+    <p>Created by Lucy Ly, 2019</p>
+</footer>
 
 </html>
