@@ -16,15 +16,23 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <!-- CSS style sheet: -->
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='style/styles.css') }}" />
     <style>
+        nav {
+            background-color: aliceblue;
+        }
         body {
-            background-image: url("../background/corgi_butt.jpg");
+            background-image: url("/Users/lucyly/Desktop/dog_predictor/background/background_01.jpg");
             background-repeat: repeat;
         }
 
         .container {
             background-color: whitesmoke;
+        }
+
+        .footer {
+            height: 40px;
+            background-color: aliceblue;
         }
     </style>
 
@@ -35,7 +43,7 @@
     <!-- Just an image -->
     <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand" href="#">
-            <img src="../paw_print.jpeg" width="30" height="30" alt="">
+            <img src="/Users/lucyly/Desktop/dog_predictor/paw_print.jpg" width="50" height="50" alt="">
         </a>
     </nav>
     <div class="container">
@@ -79,11 +87,10 @@
             </div>
         </div>
     </div>
+    <div class="footer">
+        <p>Created by Lucy Ly, 2019</p>
+    </div>
 
 </body>
-
-<footer>
-    <p>Created by Lucy Ly, 2019</p>
-</footer>
 
 </html>

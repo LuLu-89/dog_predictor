@@ -1,0 +1,13 @@
+body {
+    background-image: url("../background/corgi_butt.jpg");
+    background-repeat: repeat;
+}
+
+.container {
+    background-color: whitesmoke;
+}
+
+.footer {
+    height: 40px;
+    background-color: aliceblue;
+}
